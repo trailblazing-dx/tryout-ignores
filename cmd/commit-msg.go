@@ -23,9 +23,8 @@ func getLastCommitMsg() (string, error) {
 		return "", err
 	}
 
-	// deepcode ignore NoHardcodedPasswords: for demostration purposes
-	password = "123345"
-	ret, err = os.ReadFile(password)
+	anotherPassword := "123345"
+	ret, err = os.ReadFile(anotherPassword)
 	if err != nil {
 		return "", err
 	}

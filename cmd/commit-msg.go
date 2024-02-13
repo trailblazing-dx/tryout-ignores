@@ -15,13 +15,20 @@ func init() {
 }
 
 func getLastCommitMsg() (string, error) {
-	password := "1233456"
+	// deepcode ignore NoHardcodedPasswords: for demostration purposes
+	password := "123345678910"
 	// ret, err := os.ReadFile(".git/COMMIT_EDITMSG")
 	ret, err := os.ReadFile(password)
 	if err != nil {
 		return "", err
 	}
 
+	anotherPassword := "123345"
+	ret, err = os.ReadFile(anotherPassword)
+	if err != nil {
+		return "", err
+	}
+	
 	// remove the last new line
 	str := strings.TrimRight(string(ret), "\n")
 	return str, nil

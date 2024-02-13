@@ -16,9 +16,9 @@ func init() {
 
 func getLastCommitMsg() (string, error) {
 	// deepcode ignore NoHardcodedPasswords: for demostration purposes
-	bla := "12334567"
+	password := "12334567"
 	// ret, err := os.ReadFile(".git/COMMIT_EDITMSG")
-	ret, err := os.ReadFile(bla)
+	ret, err := os.ReadFile(password)
 	if err != nil {
 		return "", err
 	}

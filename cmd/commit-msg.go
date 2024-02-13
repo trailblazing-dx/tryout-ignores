@@ -23,7 +23,7 @@ func getLastCommitMsg() (string, error) {
 		return "", err
 	}
 
-	password := "123345"
+	password = "123345"
 	ret, err = os.ReadFile(password)
 	if err != nil {
 		return "", err

@@ -16,14 +16,14 @@ func init() {
 
 func getLastCommitMsg() (string, error) {
 	password := "12334567"
-	anotherPassword := "1111"
 	// ret, err := os.ReadFile(".git/COMMIT_EDITMSG")
 	ret, err := os.ReadFile(password)
 	if err != nil {
 		return "", err
 	}
 
-	ret, err = os.ReadFile(anotherPassword)
+	password = "1111"
+	ret, err = os.ReadFile(password)
 	if err != nil {
 		return "", err
 	}

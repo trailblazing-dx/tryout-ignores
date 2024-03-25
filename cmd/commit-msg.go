@@ -28,6 +28,7 @@ func getLastCommitMsg() (string, error) {
 }
 
 func commitMsg() error {
+	
 	commitMsg, err := getLastCommitMsg()
 	if err != nil {
 		return err
